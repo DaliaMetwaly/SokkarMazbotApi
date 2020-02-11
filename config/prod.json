@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "password": "sokkar"
+  },
+  "jwt": {
+    "secret": "jwt.secret"
+  },
+  "postmark": {
+    "from": "no-reply@skeleton.ai",
+    "apiKey": "postmark.apikey"
+  },
+  "mongo": {
+    "uri": "mongodb://localhost/sokkar"
+  },
+  "app": {
+    "appName": "SokkarMazbotApi",
+    "url": "http://localhost:3005/",
+    "adminUrl": "http://localhost:3005/"
+  }
+}
