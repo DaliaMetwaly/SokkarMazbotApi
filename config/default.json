@@ -1,0 +1,42 @@
+{
+    "cors": {
+      "exposeHeaders": [
+        "content-length"
+      ],
+      "maxAge": 600
+    },
+    "bind": {
+      "port": 3005,
+      "host": "0.0.0.0"
+    },
+    "mongo": {
+  
+      "uri": "mongodb://root:sokkar1234@ds037185.mlab.com:37185/heroku_qr5gqfgl",
+      "debug": false,
+      "options": {
+      }
+    },
+    "admin": {
+      "firstName": "admin",
+      "email": "admin@sokkar.dev",
+      "password": "sokkar"
+    },
+    "jwt": {
+      "secret": "jwt.secret",
+      "expiresIn": {
+        "temporary": "1d",
+        "regular": "30d",
+        "invite": "1d"
+      }
+    },
+    "app": {
+      "appName": "SokkarMazbotApi",
+      "url": "http://web-sokar-api-test.herokuapp.com/",
+      "adminUrl": "http://web-sokar-api-test.herokuapp.com/"
+    },
+    "postmark": {
+      "from": "no-reply@skeleton.ai",
+      "apiKey": "postmark.apikey"
+    }
+  }
+

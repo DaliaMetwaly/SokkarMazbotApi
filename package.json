@@ -1,0 +1,87 @@
+{
+  "name": "boiler-api",
+  "version": "1.0.0",
+  "description": "Open Software for Token Distribution",
+  "main": "dist",
+  "license": "MIT",
+  "engines": {
+    "node": ">=9.6.1"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "scripts": {
+    "dev": "nodemon -w src --exec \"MOCK_EMAIL=true NODE_ENV=dev node src/index.js\"",
+    "start": "node src/index.js",
+    "lint": "eslint src",
+    "jest": "jest",
+    "test": "jest -i src",
+    "test:watch": "jest --watch -i src",
+    "emails": "node emails/build"
+  },
+  "dependencies": {
+    "@koa/cors": "2.2.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "1.30.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "joi": "13.2.0",
+    "jsonwebtoken": "8.2.1",
+    "koa": "2.5.0",
+    "koa-bodyparser": "4.2.0",
+    "koa-logger": "3.2.0",
+    "koa-router": "7.4.0",
+    "koa2-swagger-ui": "^2.16.0",
+    "lodash": "4.17.5",
+    "mockgoose": "^7.3.5",
+    "mongoose": "5.0.15",
+    "postmark": "1.6.1",
+    "yamljs": "^0.3.0",
+    "multer": "^1.4.2",
+    "sharp": "^0.24.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "jest": "22.4.3",
+    "juice": "4.2.3",
+    "nodemon": "1.17.3",
+    "pre-commit": "1.2.2",
+    "prettier": "1.12.1",
+    "prettier-eslint": "8.8.1",
+    "supertest": "3.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/test-helpers/setup-tests.js"
+    ]
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "always",
+    "printWidth": 120
+  }
+}

@@ -1,0 +1,52 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "SokkarMazbot",
+        "version": "0.0.0",
+        "title": "API",
+        "license": {
+            "name": "ProCrew"
+        }
+    },
+    "basePath": "/1.0",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "/auth/login"
+                ],
+                "summary": "User Login.",
+                "description": " user login ",
+                "responses": {},
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "user",
+                        "description": "{\"email\":\"admin@sokkar.dev\",\"password\":\"sokkar\"}"
+                    }
+                ]
+            }
+        },
+
+        "/mealtype/all": {
+            "get": {
+                "tags": [
+                    "/mealtype/all"
+                ],
+                "summary": "get All Meal Types",
+                "description": " get All Meal Types ex:( اسم البرنامج الغذائي  A  -  10%نسبه الكربوهيدرات   ) ",
+                "responses": {},
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "default":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTNjM2NmOThkOWFhNzMyOTBlNDFhMGEiLCJ0eXBlIjoidXNlciIsImtpZCI6InVzZXIiLCJpYXQiOjE1ODEwOTIwODQsImV4cCI6MTU4MzY4NDA4NH0.yBQEut_oRFxZkO5wFB29pKpkQlQdLrUvG4nU6vGjJsI"
+                    }
+                ]
+            }
+        }
+    }
+}
